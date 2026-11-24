@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Graphes style maison</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <header>
+    <div class="types" role="tablist">
+      <button data-type="stacked" role="tab">Barres empilées</button>
+      <button data-type="waterfall" role="tab">Waterfall</button>
+      <button data-type="mekko" role="tab">Mekko</button>
+    </div>
+    <div id="mode" class="mode"></div>
+  </header>
+
+  <section>
+    <div id="preview" class="preview" aria-label="Aperçu"></div>
+  </section>
+
+  <section>
+    <h2>Données</h2>
+    <p id="hint" class="hint"></p>
+    <div class="gridwrap"><table id="grid"></table></div>
+    <div class="row">
+      <button class="small" id="addRow">+ ligne</button>
+      <button class="small" id="delRow">− ligne</button>
+      <button class="small" id="addCol">+ colonne</button>
+      <button class="small" id="delCol">− colonne</button>
+      <button class="small" id="reset" title="Revenir aux données d'exemple">Exemple</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Style</h2>
+    <div id="options" class="options"></div>
+  </section>
+
+  <footer>
+    <button id="insert" class="primary">Insérer sur la diapositive</button>
+    <button id="update" class="primary" hidden>Mettre à jour le graphe</button>
+    <button id="asNew" class="link" hidden>Insérer comme nouveau graphe</button>
+    <p id="status" class="status" role="status"></p>
+  </footer>
+
+  <script src="charts.js"></script>
+  <script src="render-office.js"></script>
+  <script src="taskpane.js"></script>
+</body>
+</html>
